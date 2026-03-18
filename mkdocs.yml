@@ -1,13 +1,24 @@
 site_name: GuardedBox Documentation Test
 site_description: GuardedBox Documentation Test
-
-theme:
-  name: gitbook
+site_url: https://miguelolmedomorell.github.io/guardedbox-test/
 
 repo_url: https://github.com/miguelolmedomorell/guardedbox-test
 repo_name: miguelolmedomorell/guardedbox-test
 edit_uri: edit/main/docs/
-site_url: https://miguelolmedomorell.github.io/guardedbox-test/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
 
 markdown_extensions:
   - admonition
@@ -18,3 +29,4 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  
