@@ -1,1 +1,20 @@
-site_name: My Docs
+site_name: GuardedBox Documentation Test
+site_description: GuardedBox Documentation Test
+
+theme:
+  name: gitbook
+
+repo_url: https://github.com/miguelolmedomorell/guardedbox-test
+repo_name: miguelolmedomorell/guardedbox-test
+edit_uri: edit/main/docs/
+site_url: https://miguelolmedomorell.github.io/guardedbox-test/
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+nav:
+  - Home: index.md
