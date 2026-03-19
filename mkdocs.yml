@@ -17,8 +17,8 @@ theme:
     - search.suggest
   palette:
     - scheme: default
-      primary: blue
-      accent: indigo
+      primary: BlueViolet
+      accent: MediumPurple
 
 markdown_extensions:
   - admonition
@@ -28,5 +28,5 @@ markdown_extensions:
       anchor_linenums: true
 
 nav:
-  - Home: index.md
+  - Home: docs/receta-2fa-guardedbox.md
   
