@@ -15,7 +15,7 @@ Este procedimiento no modifica tu contraseña ni tus secretos almacenados.
 <details>
 <summary>¿Qué son los TOTP?</summary>
 
-Los TOTP, o *Time-based One-time Password*, son códigos numéricos temporales que cambian cada pocos segundos y se utilizan como segundo factor de autenticación para aumentar la seguridad.
+Los TOTP, o Time-based One-time Password, son códigos numéricos temporales que cambian cada pocos segundos y se utilizan como segundo factor de autenticación para aumentar la seguridad.
 </details>
 
 !!! warning "Advertencia"
@@ -28,7 +28,7 @@ Los TOTP, o *Time-based One-time Password*, son códigos numéricos temporales q
 1. Accede a tu cuenta de GuardedBox.
 2. Selecciona **Mi cuenta** en el panel de navegación.
 
-<img src="images/mi-cuenta.png" width="65%" style="border: 1px solid #ccc;" alt="Sección Mi cuenta">
+<img src="images/mi-cuenta.png" style="border: 1px solid #ccc;" alt="Sección Mi cuenta">
 
 3. Desplázate hasta la sección **Segundo factor de autenticación (2FA)**.
 
@@ -38,21 +38,21 @@ Los TOTP, o *Time-based One-time Password*, son códigos numéricos temporales q
 
 1. Selecciona **Generar los códigos de acceso utilizando una app de autenticación (TOTP)**.
 
-<img src="images/2FA.png" width="50%" style="border: 1px solid #ccc;" alt="Opción para generar los códigos de acceso utilizando una app de autenticación (TOTP)">
+<img src="images/2FA.png" style="border: 1px solid #ccc;" alt="Opción para generar los códigos de acceso utilizando una app de autenticación (TOTP)">
 
-2. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente y selecciona **Continuar**.
+1. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente y selecciona **Continuar**.
 
-<img src="images/confirmation.png" width="50%" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
+<img src="images/confirmation.png" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
 
 !!! tip "Consejo"
     Después de activar la autenticación con app, te recomendamos generar un código de recuperación.
 
-<img src="images/codigo-recuperacion.png" width="50%" style="border: 1px solid #ccc;" alt="Activar código de recuperación">
+<img src="images/codigo-recuperacion.png" style="border: 1px solid #ccc;" alt="Activar código de recuperación">
 
 <details>
 <summary>¿Qué es un código de recuperación?</summary>
 
-Un código de recuperación es un código de un solo uso que permite acceder a tu cuenta si no tienes disponible el dispositivo utilizado para la autenticación.
+Un código de un solo uso que permite acceder a tu cuenta si no tienes disponible el dispositivo utilizado para la autenticación.
 </details>
 
 ---
@@ -64,7 +64,7 @@ Un código de recuperación es un código de un solo uso que permite acceder a t
 3. Introduce el código generado por tu app de autenticación.
 4. Selecciona **Continuar**.
 
-<img src="images/codigo-qr.png" width="50%" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
+<img src="images/codigo-qr.png" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
 
 !!! warning "Advertencia"
     El código generado por la app solo es válido durante unos segundos. Después se generará uno nuevo.
@@ -97,19 +97,19 @@ A partir de este momento:
 
 1. Selecciona el icono de engranaje a la derecha de **Generar los códigos de acceso utilizando una app de autenticación (TOTP)**.
 
-<img src="images/reconfigurar.png" width="50%" style="border: 1px solid #ccc;" alt="Reconfigurar la autenticación en dos pasos con una app de autenticación">
+<img src="images/reconfigurar.png" style="border: 1px solid #ccc;" alt="Reconfigurar la autenticación en dos pasos con una app de autenticación">
 
-2. Repite el proceso desde el paso **2. Activa la autenticación en dos pasos con una app de autenticación**.
+1. Repite el proceso desde el paso **2. Activa la autenticación en dos pasos con una app de autenticación**.
 
 !!! danger "Quiero volver a utilizar el email como segundo factor de autenticación"
     Para volver a utilizar el email:
 
 1. Selecciona **Recibir los códigos de acceso por email**.
 
-<img src="images/acceso_por_email.png" width="50%" style="border: 1px solid #ccc;" alt="Recibir los códigos de acceso por email">
+<img src="images/acceso_por_email.png" style="border: 1px solid #ccc;" alt="Recibir los códigos de acceso por email">
 
-2. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente.
-3. Selecciona **Continuar**.
+1. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente.
+2. Selecciona **Continuar**.
 
 GuardedBox mostrará una ventana de confirmación indicando que la configuración se ha completado correctamente.
 
