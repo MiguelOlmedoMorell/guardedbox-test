@@ -18,7 +18,7 @@ Este procedimiento no modifica tu contraseña ni tus secretos almacenados.
 Los TOTP, o *Time-based One-time Password*, son códigos numéricos temporales que cambian cada pocos segundos y se utilizan como segundo factor de autenticación para aumentar la seguridad.
 </details>
 
-!!! warning Advertencia
+!!! "warning" Advertencia
     Si pierdes el dispositivo que utilizas para la verificación en dos pasos, podrías quedarte sin acceso a tu cuenta. Para evitarlo, activa el código de recuperación y guárdalo en un lugar seguro.
 
 ---
@@ -44,7 +44,7 @@ Los TOTP, o *Time-based One-time Password*, son códigos numéricos temporales q
 
 <img src="images/confirmation.png" width="50%" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
 
-!!! tip Consejo
+!!! "tip" Consejo
     Después de activar la autenticación con app, te recomendamos generar un código de recuperación.
 
 <img src="images/codigo-recuperacion.png" width="50%" style="border: 1px solid #ccc;" alt="Activar código de recuperación">
@@ -66,7 +66,7 @@ Un código de recuperación es un código de un solo uso que permite acceder a t
 
 <img src="images/codigo-qr.png" width="50%" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
 
-!!! warning Advertencia
+!!! "warning" Advertencia
     El código generado por la app solo es válido durante unos segundos. Después se generará uno nuevo.
 
 ---
@@ -84,7 +84,7 @@ A partir de este momento:
 
 ## Resolución de problemas
 
-!!! danger No puedo escanear el código QR
+!!! "danger" No puedo escanear el código QR
     Si no puedes escanear el código QR con tu app de autenticación:
 
 1. Selecciona **Ingresar clave de configuración** en tu app de autenticación.
@@ -92,7 +92,7 @@ A partir de este momento:
 3. Introduce el código generado por tu app de autenticación.
 4. Selecciona **Continuar**.
 
-!!! danger Quiero reconfigurar la autenticación en dos pasos con una app de autenticación
+!!! "danger" Quiero reconfigurar la autenticación en dos pasos con una app de autenticación
     Para reconfigurar el segundo factor:
 
 1. Selecciona el icono de engranaje a la derecha de **Generar los códigos de acceso utilizando una app de autenticación (TOTP)**.
@@ -101,7 +101,7 @@ A partir de este momento:
 
 2. Repite el proceso desde el paso **2. Activa la autenticación en dos pasos con una app de autenticación**.
 
-!!! danger Quiero volver a utilizar el email como segundo factor de autenticación
+!!! "danger" Quiero volver a utilizar el email como segundo factor de autenticación
     Para volver a utilizar el email:
 
 1. Selecciona **Recibir los códigos de acceso por email**.
@@ -118,5 +118,5 @@ A partir de este momento:
 - Ya no recibirás códigos de acceso a través de la app.
 - Cada inicio de sesión requerirá introducir un código temporal enviado a tu email.
 
-!!! warning Advertencia
+!!! "warning" Advertencia
     Si dejas de usar la app de autenticación, te recomendamos eliminar la clave de GuardedBox almacenada en la aplicación.
