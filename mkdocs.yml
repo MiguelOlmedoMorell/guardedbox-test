@@ -1,5 +1,5 @@
-site_name: GuardedBox Documentation Test
-site_description: GuardedBox Documentation Test
+site_name: Tutorial GuardedBox
+site_description: Cómo activar la autenticación en dos pasos (2FA) en GuardedBox
 site_url: https://miguelolmedomorell.github.io/guardedbox-test/
 
 repo_url: https://github.com/miguelolmedomorell/guardedbox-test
@@ -17,8 +17,8 @@ theme:
     - search.suggest
   palette:
     - scheme: default
-      primary: BlueViolet
-      accent: MediumPurple
+      primary: deep purple
+      accent: purple
 
 markdown_extensions:
   - admonition
@@ -28,5 +28,4 @@ markdown_extensions:
       anchor_linenums: true
 
 nav:
-  - Home: docs/receta-2fa-guardedbox.md
-  
+  - Home: index.md
