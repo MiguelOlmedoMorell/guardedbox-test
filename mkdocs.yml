@@ -28,5 +28,5 @@ markdown_extensions:
       anchor_linenums: true
 
 nav:
-  - Home: tutorial-guardedbox.md
+  - Home: index.md
   
