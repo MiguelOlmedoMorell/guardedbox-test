@@ -8,6 +8,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  language: es
+  favicon: 'images/guardedbox_logo.jpg' 
   features:
     - navigation.tabs
     - navigation.sections
@@ -24,8 +26,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
 
 nav:
-  - Home: index.md
+  - Tutorial: index.md

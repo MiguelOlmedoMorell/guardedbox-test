@@ -1,16 +1,22 @@
-# Cómo activar la autenticación en dos pasos (2FA) con una app de autenticación (TOTP)
+# Activar la autenticación en dos pasos (2FA) con una app de autenticación (TOTP)
 
-## Objetivo
+Descubre cómo activar la autenticación en dos pasos (2FA) en tu cuenta de GuardedBox utilizando una aplicación de autenticación compatible con TOTP para mejorar la seguridad de acceso.
 
-Activar la autenticación en dos pasos (2FA) en tu cuenta de GuardedBox utilizando una aplicación de autenticación compatible con TOTP para mejorar la seguridad de acceso.
-
-Este procedimiento no modifica tu contraseña ni tus secretos almacenados.
-
-## Prerrequisitos
+Para ello necesitas:
 
 - Una cuenta activa en GuardedBox
 - Acceso al correo electrónico asociado a tu cuenta
 - Una app de autenticación móvil compatible con TOTP, como **Microsoft Authenticator** o **Google Authenticator**
+
+Este procedimiento no modifica tu contraseña ni tus secretos almacenados.
+
+<details>
+<summary>¿Qué es la autenticación en dos pasos (2FA)?</summary>
+
+La verificación en dos pasos (2FA) añade una capa extra de seguridad al iniciar sesión. Al activarla, tendrás que introducir un código de verificación (que recibirás por email o en el móvil) cada vez que accedas a tu cuenta.
+
+Por defecto, GuardedBox usa tu email como segundo factor de verificación.
+</details>
 
 <details>
 <summary>¿Qué son los TOTP?</summary>
@@ -19,7 +25,7 @@ Los TOTP, o Time-based One-time Password, son códigos numéricos temporales que
 </details>
 
 !!! warning "Advertencia"
-    Si pierdes el dispositivo que utilizas para la verificación en dos pasos, podrías quedarte sin acceso a tu cuenta. Para evitarlo, activa el código de recuperación y guárdalo en un lugar seguro.
+    Si pierdes el dispositivo que utilizas para la verificación en dos pasos, **podrías perder acceso a tu cuenta**. Para evitarlo, [activa el código de recuperación](#codigo-recuperacion) y guárdalo en un lugar seguro.
 
 ---
 
@@ -28,32 +34,21 @@ Los TOTP, o Time-based One-time Password, son códigos numéricos temporales que
 1. Accede a tu cuenta de GuardedBox.
 2. Selecciona **Mi cuenta** en el panel de navegación.
 
-<img src="images/mi-cuenta.png" style="border: 1px solid #ccc;" alt="Sección Mi cuenta">
+    <img src="images/mi-cuenta.png" width="85%" style="border: 1px solid #ccc;" alt="Sección Mi cuenta">
 
 3. Desplázate hasta la sección **Segundo factor de autenticación (2FA)**.
 
 ---
 
-## 2. Activa la autenticación en dos pasos con una app de autenticación
+## 2. Activa la autenticación en dos pasos con una app de autenticación {#activar-autenticacion}
 
 1. Selecciona **Generar los códigos de acceso utilizando una app de autenticación (TOTP)**.
 
-<img src="images/2FA.png" style="border: 1px solid #ccc;" alt="Opción para generar los códigos de acceso utilizando una app de autenticación (TOTP)">
+    <img src="images/2FA.png" width="70%" style="border: 1px solid #ccc;" alt="Opción para generar los códigos de acceso utilizando una app de autenticación (TOTP)">
 
-1. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente y selecciona **Continuar**.
+2. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente y selecciona **Continuar**.
 
-<img src="images/confirmation.png" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
-
-!!! tip "Consejo"
-    Después de activar la autenticación con app, te recomendamos generar un código de recuperación.
-
-<img src="images/codigo-recuperacion.png" style="border: 1px solid #ccc;" alt="Activar código de recuperación">
-
-<details>
-<summary>¿Qué es un código de recuperación?</summary>
-
-Un código de un solo uso que permite acceder a tu cuenta si no tienes disponible el dispositivo utilizado para la autenticación.
-</details>
+    <img src="images/confirmation.png" width="70%" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
 
 ---
 
@@ -64,59 +59,85 @@ Un código de un solo uso que permite acceder a tu cuenta si no tienes disponibl
 3. Introduce el código generado por tu app de autenticación.
 4. Selecciona **Continuar**.
 
-<img src="images/codigo-qr.png" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
+    <img src="images/codigo-qr.png" width="70%" style="border: 1px solid #ccc;" alt="Ventana de confirmación">
 
 !!! warning "Advertencia"
     El código generado por la app solo es válido durante unos segundos. Después se generará uno nuevo.
 
----
-
-## Resultado esperado
-
-GuardedBox mostrará una ventana de confirmación indicando que la configuración se ha completado correctamente.
+GuardedBox mostrará una ventana de confirmación indicando que la configuración se ha completado correctamente y enviará un correo electrónico confirmando el cambio en los ajustes.
 
 A partir de este momento:
 
 - Ya no recibirás códigos de acceso por email.
 - Cada inicio de sesión requerirá introducir un código temporal generado en tu app de autenticación.
 
+!!! tip "Consejo"
+    Después de activar la autenticación con app, te recomendamos [generar un código de recuperación](#codigo-recuperacion).
+
+## 4. Activa el código de recuperación (opcional) {#codigo-recuperacion}
+
+Un código de recuperación es un código de un solo uso que permite acceder a tu cuenta si no tienes disponible el dispositivo utilizado para la autenticación.
+
+1. Accede a **Mi cuenta** > **Segundo factor de autenticación (2FA)**.
+2. Activa la opción **Activar código de recuperación**.
+
+    <img src="images/codigo-recuperacion.png" width="70%" style="border: 1px solid #ccc;" alt="Activar código de recuperación">
+
+3. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente.
+4. Selecciona **Continuar**.
+
+GuardedBox mostrará una ventana de confirmación con el código de recuperación y enviará un correo electrónico confirmando el cambio en los ajustes. Copia el código y guárdalo en un lugar seguro pero accesible.
+
+!!! warning "Advertencia"
+    - Si pierdes u olvidas el código de recuperación, puedes generar uno nuevo. El código anterior dejará de ser válido.
+    - Si usas el código de recuperación, se consumirá y se desactivará. Deberás crear uno nuevo para volver a tenerlo disponible.
+
 ---
 
-## Resolución de problemas
+## Problemas frecuentes
 
 !!! danger "No puedo escanear el código QR"
     Si no puedes escanear el código QR con tu app de autenticación:
-
-1. Selecciona **Ingresar clave de configuración** en tu app de autenticación.
-2. Rellena los datos (nombre de cuenta, clave secreta y tipo de clave).
-3. Introduce el código generado por tu app de autenticación.
-4. Selecciona **Continuar**.
+    
+    1. Selecciona **Ingresar clave de configuración** en tu app de autenticación.
+    2. Rellena los datos (nombre de cuenta, clave secreta y tipo de clave).
+    3. Introduce el código generado por tu app de autenticación.
+    4. Selecciona **Continuar**.
 
 !!! danger "Quiero reconfigurar la autenticación en dos pasos con una app de autenticación"
     Para reconfigurar el segundo factor:
+    
+    1. Selecciona el icono de engranaje a la derecha de **Generar los códigos de acceso utilizando una app de autenticación (TOTP)**.
 
-1. Selecciona el icono de engranaje a la derecha de **Generar los códigos de acceso utilizando una app de autenticación (TOTP)**.
+        <img src="images/reconfigurar.png" width="75%" style="border: 1px solid #ccc;" alt="Reconfigurar la autenticación en dos pasos con una app de autenticación">
 
-<img src="images/reconfigurar.png" style="border: 1px solid #ccc;" alt="Reconfigurar la autenticación en dos pasos con una app de autenticación">
-
-1. Repite el proceso desde el paso **2. Activa la autenticación en dos pasos con una app de autenticación**.
+    2. Repite el proceso desde el paso 2 de [Activa la autenticación en dos pasos con una app de autenticación](#activar-autenticacion).
 
 !!! danger "Quiero volver a utilizar el email como segundo factor de autenticación"
     Para volver a utilizar el email:
+    
+    1. Selecciona **Recibir los códigos de acceso por email**.
 
-1. Selecciona **Recibir los códigos de acceso por email**.
+        <img src="images/acceso_por_email.png" width="75%" style="border: 1px solid #ccc;" alt="Recibir los códigos de acceso por email">
 
-<img src="images/acceso_por_email.png" style="border: 1px solid #ccc;" alt="Recibir los códigos de acceso por email">
+    2. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente.
+    3. Selecciona **Continuar**.
+    
+    GuardedBox mostrará una ventana de confirmación indicando que la configuración se ha completado correctamente y enviará un correo electrónico confirmando el cambio en los ajustes.
 
-1. Introduce la contraseña de tu cuenta de GuardedBox en la ventana emergente.
-2. Selecciona **Continuar**.
+    A partir de este momento:
 
-GuardedBox mostrará una ventana de confirmación indicando que la configuración se ha completado correctamente.
+    - Ya no recibirás códigos de acceso a través de la app.
+    - Cada inicio de sesión requerirá introducir un código temporal enviado a tu email.
 
-A partir de este momento:
+    !!! warning "Advertencia"
+        Si dejas de usar la app de autenticación, te recomendamos eliminar la clave de GuardedBox almacenada en la aplicación.
 
-- Ya no recibirás códigos de acceso a través de la app.
-- Cada inicio de sesión requerirá introducir un código temporal enviado a tu email.
+!!! danger "No recuerdo mi código de activación"
+    Para regenerar el código de activación:
+    
+    1. Selecciona el icono de engranaje a la derecha de **Activar código de recuperación**.
 
-!!! warning "Advertencia"
-    Si dejas de usar la app de autenticación, te recomendamos eliminar la clave de GuardedBox almacenada en la aplicación.
+        <img src="images/regenerar.png" width="75%" style="border: 1px solid #ccc;" alt="Regenerar el código de recuperación">
+
+    2. Repite el proceso desde el paso 3 de [4. Activa el código de recuperación (opcional)](#codigo-recuperacion).
