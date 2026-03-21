@@ -9,9 +9,9 @@ Antes de empezar, asegúrate de tener lo siguiente:
 - Una cuenta activa en GuardedBox
 - Acceso al correo electrónico asociado a tu cuenta
 - Una app de autenticación móvil compatible con TOTP. Por ejemplo:
-  - [Microsoft Authenticator](https://support.microsoft.com/en-US/authenticator/download-microsoft-authenticator)
-  - [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=es&co=GENIE.Platform%3DAndroid)
-  - [Aegis Authenticator](https://getaegis.app/)
+    - [Microsoft Authenticator](https://support.microsoft.com/en-US/authenticator/download-microsoft-authenticator)
+    - [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=es&co=GENIE.Platform%3DAndroid)
+    - [Aegis Authenticator](https://getaegis.app/)
 
 Este procedimiento no modifica tu contraseña ni tus secretos almacenados.
 
@@ -24,6 +24,7 @@ Por defecto, GuardedBox usa tu correo electrónico como segundo factor de autent
 </details>
 
 <details>
+
 <summary>¿Qué es un código TOTP?</summary>
 
 Los códigos TOTP (Time-based One-Time Password) son códigos numéricos temporales que cambian cada pocos segundos y se utilizan como segundo factor de autenticación para aumentar la seguridad.
